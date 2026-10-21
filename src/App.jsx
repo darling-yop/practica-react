@@ -2,6 +2,9 @@ import { useTextos } from "./hooks/useTextos.js";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
+import ContadorClics from "./components/ContadorClics.jsx";
+import Cronometro from "./components/Cronometro.jsx";
+import RecordarNombre from "./components/RecordarNombre.jsx"
 
 function leerSeccion() {
   return window.location.hash.slice(1) || "inicio";
@@ -51,7 +54,7 @@ function App() {
   }
 
   return (
-    <>
+    /*<>
       <Navbar
         {...datos}
         idioma={idioma}
@@ -77,6 +80,11 @@ function App() {
           ? "This example loads navegation Labels from the API "
           : "Este ejemplo carga los tecrtos del menu desde la API"}
       </p>
+    </>*/
+    <>
+      <ContadorClics />
+      <Cronometro />
+      <RecordarNombre/>
     </>
   );
 }
